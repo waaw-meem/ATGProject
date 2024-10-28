@@ -1,0 +1,56 @@
+.pagination-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5em;
+
+    .pagination-btn{
+        cursor: pointer;
+    }
+
+    &-left {
+        display: flex;
+        align-items: center;
+
+        &-number {
+            margin: 0 0.5em;
+            font-weight: 400;
+            font-size: 1.125em;
+        }
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+
+        &-number {
+            margin: 0 0.5em;
+            font-weight: 400;
+            font-size: 1.125em;
+        }
+    }
+
+    &-slider {
+        display: flex;
+        align-items: center;
+
+        &-left {
+            width: 5.3125em;
+            display: block;
+            background: #AEB4BA;
+            height: 2px;
+            &.active{
+                height: .35em;
+                background: rgb(var(--primary-color));
+                border-radius: 1em;
+            }
+        }
+
+        &-right {
+            width: 5.3125em;
+            display: block;
+            background: #AEB4BA;
+            height: 2px;
+        }
+    }
+}

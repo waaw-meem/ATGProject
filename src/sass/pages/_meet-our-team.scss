@@ -1,0 +1,77 @@
+.teamSection {
+
+  .grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.25em;
+
+    @media #{$ipadpro} {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media #{$ipad} {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media #{$mobL} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  .card {
+    &:hover {
+      .card__header {
+        .card__figure {
+          filter: grayscale(0);
+        }
+      }
+    }
+
+    .card__header {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+}
+
+.modal__contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 2.5em;
+  margin-top: 4.5625em;
+
+  .modal__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 58%;
+
+    .modal__footer {
+      .copy-wrapper__socials {
+        ul {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+
+  .modal__image {
+    flex: 0 0 487px;
+    height: 33.125em;
+
+    @media #{$ipadpro} {
+      flex: 0 0 40%;
+      height: 23.125em;
+    }
+  }
+
+  @media #{$mobL} {
+    flex-direction: column-reverse;
+  }
+}

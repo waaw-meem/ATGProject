@@ -1,0 +1,69 @@
+// .text-editor {
+//   ul {
+//     padding-left: 1em;
+//   }
+// }
+
+// .not-found-wrapper {
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   .content-wrapper {
+//     max-width: 50.875em;
+//     text-align: center;
+//     p {
+//       padding: 0 2em;
+//     }
+//     .not-found-anchor-wrapper {
+//       display: flex;
+//       justify-content: center;
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       gap: 1em;
+//     }
+//   }
+// }
+
+
+.testimonial-section {
+
+  &:nth-child(even) {
+    .text-wrapper {
+      padding-left: 4.0625em;
+
+      @media #{$ipad} {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+    .text-wrapper {
+      padding-right: 4.0625em;
+
+      @media #{$ipad} {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .text-wrapper {
+    @media #{$mob} {
+      margin-top: 1.25em;
+    }
+  }
+
+  .img-wrapper {
+    @media #{$desktop} {
+      width: 51.5625em;
+    }
+  }
+
+}
+
+.bottom-text{
+  .h4{
+    margin-top: 2.3529em;
+  }
+}

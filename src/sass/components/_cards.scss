@@ -1,0 +1,156 @@
+.card {
+  position: relative;
+
+  // &--custom-size {
+  //   width: 35.625em;
+  //   height: 27.5em;
+
+  //   @media #{$ipadpro} {
+  //     width: 21.625em;
+  //     height: 100%;
+  //   }
+  // }
+
+  &:hover & {
+    &__header {
+      &::before {
+        background: rgba(var(--primary-color), 0);
+      }
+
+      &--custom-flex {
+        filter: grayscale(0);
+      }
+    }
+
+    &__desc {
+      opacity: 1;
+    }
+
+    &__body {
+      .btnn {
+        opacity: 1;
+      }
+
+      &--no-button {
+        @media #{$desktop}{
+          .btnn {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    overflow: hidden;
+    height: 38.8125em;
+
+    &--media-height {
+      height: 28.625em;
+    }
+
+    @media #{$ipadpro} {
+      height: 28.813em;
+    }
+
+    @media #{$ipad} {
+      height: 21.813em;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      user-select: none;
+      background: rgba(var(--primary-color), 0.2);
+      z-index: 0;
+      transition: $transition;
+    }
+  }
+
+  &__figure {
+    height: 100%;
+    background: rgb(var(--primary-color));
+
+    &--custom-flex {
+      background: rgb(var(--primary-color));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: grayscale(1);
+      transition: $transition;
+    }
+  }
+
+  &__body {
+    padding: 1.5em 1.875em 1em 0;
+    transition: $transition;
+
+    &-with-bg {
+      background-color: rgb(var(--light-gray));
+      padding-left: 1.25em;
+      padding-right: 1.25em;
+    }
+  }
+
+  @media #{$desktop} {
+
+    &__desc,
+    .btnn {
+      opacity: 0;
+      transition: $transition;
+    }
+  }
+
+
+  &__small-title {
+    display: block;
+    color: rgb(var(--silver-color));
+    margin-bottom: 1em;
+
+    &--custom-color {
+      color: rgb(var(--primary-color));
+    }
+  }
+
+
+  &--title-only {
+    cursor: pointer;
+
+    .card__header {
+      height: 31.3125em;
+
+      @media #{$mobL} {
+        height: 21.813em;
+      }
+
+      // &--custom-size {
+      //   height: 100%;
+      // }
+    }
+  }
+
+  &--news {
+    .card__header {
+      height: 30.0625em;
+
+      @media #{$ipadpro} {
+        height: 20.063em;
+      }
+    }
+
+    .h5 {
+      margin-bottom: 1.4em;
+    }
+
+    .btnn {
+      opacity: 1;
+    }
+  }
+
+
+}

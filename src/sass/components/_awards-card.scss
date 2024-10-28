@@ -1,0 +1,27 @@
+.awards-card {
+    display: flex;
+    align-items: center;
+    gap: 3.125em;
+
+    @media #{$mob} {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-start;
+    }
+
+    .img-wrapper {
+        width: 20.625em;
+        height: 16.875em;
+        flex-shrink: 0;
+
+        @media #{$ipadpro} {
+            width: 14em;
+            height: auto;
+        }
+    }
+
+    .year {
+        font-size: 1.125em;
+        margin: 0 0 0.5em 0;
+    }
+}

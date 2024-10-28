@@ -1,0 +1,77 @@
+.our-projectsInner {
+    .btnn {
+        background-color: rgb(var(--primary-color)) !important;
+        color: rgb(var(--secondary-color)) !important;
+
+        &:first-child {
+            margin-right: -0.2777em;
+            border-bottom-right-radius: 0;
+            border-right: 0;
+        }
+
+        &:last-child {
+            border-right: 1px solid rgb(var(--primary-color)) !important;
+            border-bottom-right-radius: .833em !important;
+        }
+
+        &+.btnn {
+            margin-left: -0.2777em;
+            position: relative;
+            z-index: 1;
+            background-color: rgb(var(--light-gray));
+            border-top-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: 0;
+            border-left: 0;
+
+            &:hover {
+                background-color: rgb(var(--primary-color));
+            }
+
+            &.active {
+                background-color: rgb(var(--primary-color));
+                color: rgb(var(--secondary-color));
+            }
+        }
+
+        &.active {
+            background-color: rgb(var(--secondary-color)) !important;
+            color: rgb(var(--primary-color)) !important;
+        }
+    }
+
+    .grid-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 6.25em 1.875em;
+
+        @media #{$ipadpro} {
+            grid-gap: 3em 1.875em;
+        }
+
+        @media #{$mob} {
+            grid-template-columns: 1fr
+        }
+    }
+
+    .tabs-wrapper {
+        margin-bottom: 3.75em;
+        justify-content: flex-start;
+    }
+
+    .project-card {
+        .content-wrapper {
+            margin-top: 0.9375em;
+        }
+
+        .title-arrow {
+            font-weight: 500;
+
+            @media #{$desktop} {
+                font-size: 1.375em;
+            }
+        }
+    }
+}

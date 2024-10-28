@@ -1,0 +1,512 @@
+body {
+  font-family: $basefont;
+  font-weight: 400;
+  color: rgba(var(--primary-color), 1);
+  background: rgb(var(--secondary-color));
+  line-height: 1;
+}
+
+
+
+.loadjs {
+  overflow: hidden;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding: 0;
+
+  @media #{$ipad} {
+    padding: 0 5em;
+  }
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+}
+
+.container-s {
+  max-width: 100%;
+  padding: 0 3.75%;
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 11.71875%;
+
+  @media #{$ipadpro} {
+    padding: 0 5em;
+  }
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+}
+
+.section-py {
+  position: relative;
+  padding: 2em 0;
+
+  @media #{$tab} {
+    padding: 3em 0;
+  }
+
+  @media #{$desktop} {
+    padding: 5.625em 0; // 90px
+  }
+}
+
+.section-py-60 {
+  position: relative;
+  padding: 2em 0;
+
+  @media #{$tab} {
+    padding: 3em 0;
+  }
+
+  @media #{$desktop} {
+    padding: 3.75em 0;
+  }
+}
+
+.section-py-130 {
+  position: relative;
+  padding: 2em 0;
+
+  @media #{$tab} {
+    padding: 3em 0;
+  }
+
+  @media #{$desktop} {
+    padding: 8.125em 0;
+  }
+}
+
+.section-py-180 {
+  position: relative;
+  padding: 2em 0;
+
+  @media #{$tab} {
+    padding: 3em 0;
+  }
+
+  @media #{$desktop} {
+    padding: 11.25em 0;
+  }
+}
+
+// if there is no background on section
+.section-my {
+  position: relative;
+  margin: 2em 0;
+
+  @media #{$tab} {
+    margin: 3em 0;
+  }
+
+  @media #{$desktop} {
+    margin: 5.625em 0; // 90px
+  }
+}
+
+.section-my-60 {
+  position: relative;
+  margin: 2em 0;
+
+  @media #{$tab} {
+    margin: 3em 0;
+  }
+
+  @media #{$desktop} {
+    margin: 3.75em 0;
+  }
+}
+
+.section-my-130 {
+  position: relative;
+  margin: 2em 0;
+
+  @media #{$tab} {
+    margin: 3em 0;
+  }
+
+  @media #{$desktop} {
+    margin: 8.125em 0;
+  }
+}
+
+.section-my-180 {
+  position: relative;
+  margin: 2em 0;
+
+  @media #{$tab} {
+    margin: 3em 0;
+  }
+
+  @media #{$desktop} {
+    margin: 11.25em 0;
+  }
+}
+
+.generic-panel {
+  max-width: 85%;
+  padding-right: 1em;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2em;
+
+  @media #{$ipad} {
+    max-width: 70%;
+    padding-right: 0;
+  }
+
+  @media #{$mobL} {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+
+  &__small__title {
+    font-size: 1.125em;
+    letter-spacing: -0.04em;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0 0 1em;
+    line-height: 1.055em;
+    position: relative;
+    padding-right: 1em;
+    padding-bottom: 0.4em;
+
+    @media #{$mobL} {
+      font-size: 0.9em;
+    }
+
+    &::before {
+      content: "";
+      width: 41%;
+      height: 1px;
+      background: rgb(var(--primary-color));
+      position: absolute;
+      bottom: 0;
+      right: 8px;
+    }
+  }
+
+  &--center {
+    max-width: 54%;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+
+    @media #{$desktop} {
+      margin-bottom: 2.8em;
+    }
+
+    @media #{$mobL} {
+      max-width: 100%;
+    }
+
+    .h2 {
+      margin-bottom: 0.3em;
+    }
+  }
+
+  &--newStyle {
+    max-width: 54%;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+
+    .h2 {
+      font-size: 4.375em;
+    }
+
+    .small__title {
+      letter-spacing: -0.04em;
+      text-transform: capitalize;
+      display: inline-block;
+      margin: 0 0 1em;
+      line-height: 1.055em;
+      position: relative;
+      padding-right: 1em;
+      padding-bottom: 0.4em;
+
+      @media (max-width: #{$mobL}) {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  &--testimonials {
+    @media #{$ipadL} {
+      max-width: 40%;
+    }
+  }
+
+  .h1 {
+    margin-bottom: 0.28em;
+  }
+}
+
+.element-lg-left-zero {
+  @media #{$ipadL} {
+    margin-left: -5em;
+  }
+
+  @media #{$desktop} {
+    margin-left: -4.375em;
+  }
+}
+
+.element-lg-right-zero {
+  @media #{$ipadL} {
+    margin-right: -5em;
+  }
+
+  @media #{$desktop} {
+    margin-right: -4.5em;
+  }
+}
+
+// plus sign
+.plus-sign {
+  @media (max-width: 767px) {
+    position: relative;
+    transition: $transition;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 13px;
+      background: rgba(var(--primary-color), 1);
+      right: 12px;
+      top: 33%;
+      transform: translateY(-50%);
+      transition: $transition;
+      transform-origin: 0 top;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 2px;
+      background: rgba(var(--primary-color), 1);
+      right: 0px;
+      top: 33%;
+      transform: translate(-50%, -50%);
+      transition: $transition;
+    }
+
+    &.opened {
+      &::before {
+        transform: rotate(90deg) translateY(-50%);
+      }
+
+      &::after {
+        transform: rotate(90deg) translate(-50%, -50%);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// .custom-scroll-bar {
+//   scrollbar-width: thin;
+//   scrollbar-color: rgba(var(--primary-color), 1) rgba(var(--primary-color), 0.3);
+//   &::-webkit-scrollbar {
+//     width: 5px;
+//   }
+
+//   &::-webkit-scrollbar-track {
+//     background: rgba(var(--primary-color), 0.3);
+//   }
+
+//   &::-webkit-scrollbar-thumb {
+//     background-color: rgba(var(--primary-color), 1);
+//     border-radius: 8px;
+//     border: 2px solid rgba(var(--primary-color), 1);
+//   }
+// }
+
+// .title-line {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   gap: 1.31578em;
+//   text-transform: capitalize;
+//   margin-bottom: 1em;
+//   @media #{$ipadL} {
+//     font-size: 2.375em;
+//     margin: 0 0 1.5789em;
+//   }
+//   &::after {
+//     content: "";
+//     height: 1px;
+//     background: rgba(var(--gray-color), 0.3);
+//     flex: 1 1 auto;
+//     transform: translateY(0.1052em);
+//   }
+
+// }
+
+.swiper-slider-navigation {
+  display: flex;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 3.0625em;
+  height: auto;
+  background-color: transparent;
+  transition: $transition;
+  position: static;
+  margin: 0;
+  // &:hover {
+  //   border-color: rgb(var(--gold-color));
+  // }
+
+  &::after {
+    font-size: 1em;
+    content: "";
+    width: 1.25em;
+    height: 1em;
+    transition: $transition;
+  }
+}
+
+.swiper-button-prev {
+  &::after {
+    background: url("../svg/group-interior-svgs/left-swiper-icon.svg") center/contain no-repeat;
+  }
+
+  &:hover {
+    transform: rotate(-40deg);
+  }
+
+  &.white-left-nav {
+    &::after {
+      background-image: url("../svg/group-interior-svgs/left-swiper-icon-white.svg");
+    }
+  }
+}
+
+.swiper-button-next {
+  &::after {
+    background: url("../svg/group-interior-svgs/right-swiper-icon.svg") center/contain no-repeat;
+  }
+
+  &:hover {
+    transform: rotate(-40deg);
+  }
+
+  &.white-right-nav {
+    &::after {
+      background-image: url("../svg/group-interior-svgs/right-swiper-icon-white.svg");
+    }
+  }
+}
+
+.swiper-scrollbar-wrapper {
+  position: relative;
+  max-width: 8.125em;
+
+  .title {
+    font-size: 1em;
+    display: block;
+    color: rgb(var(--silver-color));
+    margin-bottom: 1em;
+    letter-spacing: -0.04em;
+  }
+
+  .swiper-scrollbar {
+    position: static;
+    width: 100%;
+
+    &-drag {
+      background-color: rgb(var(--primary-color));
+    }
+  }
+}
+
+.back-to-top {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  bottom: 13%;
+  right: 4.5em;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+
+  @media #{$ipad} {
+    display: none;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    bottom: 15%;
+  }
+
+  &__icon {
+    width: 3.75em;
+    height: 3.75em;
+    background: rgb(var(--primary-color));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.25em;
+    transition: $transition;
+    border: 1px solid transparent;
+
+    @media #{$ipadpro} {
+      width: 2.75em;
+      height: 2.75em;
+    }
+
+    path {
+      transition: $transition;
+    }
+
+    svg {
+      width: 1em;
+    }
+
+    &:hover {
+      background-color: rgb(var(--secondary-color));
+      border-color: rgb(var(--primary-color));
+
+      path {
+        fill: rgb(var(--primary-color));
+      }
+    }
+  }
+
+  &__title {
+    font-size: 0.875em;
+  }
+}

@@ -1,0 +1,403 @@
+.navigation-wrapper {
+  min-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 0 0 1em;
+
+  @media #{$ipad} {
+    min-width: 55%;
+  }
+
+  @media #{$mob} {
+    min-width: auto;
+    flex: 0 0 35%;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  // width: 100%;
+
+  @media #{$ipadpro} {
+    padding-left: 1em;
+  }
+
+  @media #{$ipadpro} {
+    position: fixed;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    transition: all 0.9s ease;
+    background: rgba(var(--primary-color), 1);
+    display: flex;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 7;
+    overflow-y: scroll;
+    padding: 0;
+    box-shadow: 0 0 27px 2px rgba(0, 0, 0, 0.5) inset,
+      0 6px 4px -5px rgba(0, 0, 0, 0.5);
+    display: none; // NOTE: we are not using this panel
+
+    &.open {
+      right: 0;
+    }
+  }
+
+  @media #{$mob} {
+    width: 100%;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  list-style-type: none;
+  padding: 0 0 0 0;
+  margin: 0 -1.7em;
+  position: relative;
+
+  
+
+  @media #{$ipadpro} {
+    padding: 3em 2em 2em 2em;
+    margin: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  
+
+  &__menuitem {
+    position: relative;
+    padding: 0;
+    margin: 0 1.7em;
+    @media #{$desktop} {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    &:hover {
+      .menu__menuitem--menulink {
+        @media #{$desktop} {
+          opacity: 1;
+          color: rgba(var(--secondary-color), 1);
+        }
+      }
+      .menu__menuitem__icon {
+        @media #{$desktop} {
+          transform: rotate(-180deg) translateY(-2px);
+        }
+      }
+      .dropdown {
+        @media #{$desktop} {
+          opacity: 1;
+          visibility: visible;
+          transform: scale(1);
+          // top: 1.5em;
+        }
+      }
+    }
+    @media #{$ipadpro} {
+      margin: 0 1em;
+      width: 100%;
+      padding: 0.75em 0 1em 0;
+      border-bottom: 1px solid rgba(var(--primary-color), 1);
+      margin: 0;
+      margin-bottom: 1em;
+    }
+
+    &--menulink {
+      display: inline-block;
+      font-size: 0.9em;
+      font-weight: 500;
+      font-family: $basefont;
+      line-height: 1;
+      color: rgba( var(--secondary-color),1);
+      text-transform: capitalize;
+      text-decoration: none;
+      transition: $transition;
+      @media #{$ipadpro} {
+        font-size: 1.5em;
+        color: rgba(var(--primary-color), 1);
+        width: auto;
+        // flex: 0 0 auto;
+      }
+
+      &.active {
+        @media #{$ipadpro} {
+          color: rgba(var(--primary-color), 1);
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        height: 2px;
+        border-radius: 2.3125em;
+        background: rgba( var(--secondary-color) ,1);
+        transition: $transition;
+        bottom: -0.555em;
+      }
+
+      &:hover,
+      &.active {
+        color: rgba( var(--secondary-color) ,1);
+        &::before {
+          width: 100%;
+          @media #{$ipadpro} {
+            width: 0;
+          }
+        }
+      }
+    }
+
+    span.menu__menuitem--menulink {
+      cursor: default;
+    }
+
+    &__icon {
+      width: 2em;
+      height: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0;
+      background: rgba(var(--primary-color), 1);
+      position: absolute;
+      right: 0;
+      top: 7px;
+      transition: $transition;
+      cursor: pointer;
+
+      @media #{$desktop} {
+        position: static;
+        background-color: transparent;
+        margin-left: 0.2272em;
+        flex: 0 0 0.409em;
+        width: 0.409em;
+        height: 0.2727em;
+        transform: rotate(0deg) translateY(-2px);
+        transform-origin: top;
+        transition-delay: 0.1s;
+        display: none;
+      }
+      img,
+      svg {
+        transition: $transition;
+        transform-origin: center center;
+        pointer-events: none;
+      }
+      &.open {
+        img,
+        svg {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    &.active {
+      @media #{$desktop} {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 5px;
+          background: rgba(var(--primary-color), 1);
+          bottom: -1.75em;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+// .dropdown-active {
+//   > .active {
+//     @media #{$ipadpro} {
+//       color: rgba(var(--primary-color), 1);
+//     }
+//   }
+// }
+
+// navigation
+.nav-button {
+  position: relative;
+  height: 0.875em;
+  width: 1.9375em;
+  padding: 0;
+  background: transparent;
+  transition: all 250ms ease-out;
+  z-index: 99;
+  cursor: pointer;
+  display: none;
+
+  // @media #{$ipadpro} {
+  //   display: flex;
+  // }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: rgba(var(--primary-color), 1);
+    transition: all 250ms ease-out;
+    will-change: transform;
+  }
+
+  &::before {
+    transform: translateY(0);
+  }
+
+  &::after {
+    transform: translateY(10px);
+  }
+
+  &.active {
+    &::before {
+      transform: translateY(0) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+}
+
+// dropdown
+.dropdown {
+  list-style: none;
+  margin: 0;
+  @media #{$desktop} {
+    position: absolute;
+    white-space: nowrap;
+    background: rgba(var(--primary-color), 1);
+    top: 1.5em;
+    right: 0;
+    box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.5);
+    transition: opacity, transform, 0.3s cubic-bezier(0, 0.28, 0.6, 0.97) 0.2s;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 10em;
+    overflow: hidden;
+    margin: 0;
+    transform: scale(0.9);
+    transform-origin: right;
+    border-radius: 0.2em;
+    background-color: rgba(var(--gray-color), 0.8);
+  }
+
+  @media #{$ipadpro} {
+    max-height: 0;
+    transition: $transition;
+    overflow: hidden;
+    // flex: 0 0 100%;
+  }
+
+
+
+  &__item {
+    @media #{$ipadpro} {
+      width: 100%;
+    }
+    a {
+      font-size: 1em;
+      color: rgba(var(--primary-color), 1);
+      padding: 1em 1.5em;
+      border-bottom: 1px solid rgba(var(--primary-color), 1);
+      display: block;
+      transition: $transition;
+      line-height: 1;
+      &:hover {
+        @media #{$desktop} {
+          background: rgba(var(--primary-color), 1);
+          color: rgba(var(--primary-color), 1);
+          border-color: rgba(var(--primary-color), 1);
+        }
+      }
+      @media #{$desktop} {
+        font-size: 0.6611em;
+        color: rgba(var(--white-color), 1);
+        border-bottom: 1px solid rgba(var(--white-color), 0.2);
+        padding: 0.7em 1.5em;
+      }
+
+      @media #{$ipadpro} {
+        padding-left: 0.5em;
+      }
+
+      &.active {
+        @media #{$desktop} {
+          background: rgba(var(--primary-color), 1);
+          color: rgba(var(--primary-color), 1);
+        }
+        @media #{$ipadpro} {
+          background: rgba(var(--primary-color), 1);
+          color: rgba(var(--primary-color), 1);
+        }
+      }
+    }
+    &:last-child {
+      a {
+        border: none;
+      }
+    }
+  }
+}
+
+.cursor {
+  display: none;
+  @media #{$desktop} {
+    display: block;
+    background: rgba(var(--primary-color), 1);
+    height: 5px;
+    position: absolute;
+    bottom: -1.75em;
+    border-radius: 10px;
+    z-index: 10;
+    transition: $transition;
+  }
+}
+
+.search-modal-open {
+  .menu {
+    &__menuitem {
+      &:hover {
+        .menu__menuitem--menulink {
+          @media #{$desktop} {
+            color: rgba(var(--primary-color), 1);
+          }
+        }
+      }
+    }
+  }
+  .header {
+    &.sticky {
+      .menu__menuitem {
+        &:hover {
+          .menu__menuitem--menulink {
+            @media #{$desktop} {
+              color: rgba(var(--primary-color), 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@import "./abstract/fonts";
+@import "./abstract/variable";
+@import "./abstract/functions";
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/theme";
+@import "./abstract/mixins";
+@import "./abstract/extra";
+
+// utitlities 
+@import "./base/general";
+@import "./abstract/colors";
+@import "./abstract/animate";
+@import "./layout/grid";
+@import "./abstract/utilities";
+
+//  components 
+@import "./components/button";
+@import "./components/form-field";
+@import "./components/cards";
+@import "./components/awards-card";
+@import "./components//modal";
+@import "./components/secondary-card";
+@import "./components/accordions";
+@import "./components/pagination";
+
+
+// layouts
+@import "./layout/navigation";
+@import "./layout/header";
+@import "./layout/inner-hero";
+@import "./layout/footer";
+
+
+
+// pages
+@import "./pages/who-we-are";
+@import "./pages/news-detail";
+@import "./pages/strength-and-capability";
+@import "./pages/projectPage";
+@import "./pages/awards-accreditation";
+@import "./pages/meet-our-team";
+@import "./pages/media";
+@import "./pages/our-projects";
+@import "./pages/sectors";
+@import "./pages/contact-us";
+@import "./pages/sustainability";
+@import "./pages/our-services";

@@ -1,0 +1,226 @@
+.inner-hero-sec {
+  padding-top: 10em;
+
+  &--with-slider-options {
+    .inner-hero {
+      &__main-panel {
+        .generic-panel {
+          @media #{$ipad} {
+            .generic-panel {
+              flex: 0 0 60%;
+            }
+          }
+        }
+
+        @media #{$mob} {
+          flex-direction: column;
+          align-items: flex-start;
+          grid-gap: 0.625em;
+        }
+      }
+    }
+  }
+
+  @media #{$ipadpro} {
+    padding-top: 7em;
+  }
+
+  @media #{$mob} {
+    padding-top: 5em;
+  }
+}
+
+.inner-hero {
+  &__figure {
+    position: relative;
+    height: 45em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, #000 -3.21%, rgba(0, 0, 0, 0) 44.56%);
+      user-select: none;
+      height: 70%;
+      opacity: 0.6;
+      user-select: none;
+    }
+  }
+
+  &__text {
+    position: relative;
+  }
+
+  &__main-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.75em;
+
+    .generic-panel {
+      max-width: 100%;
+      flex: 0 0 75%;
+      margin: 0;
+
+      @media #{$ipad} {
+        flex: 0 0 60%;
+      }
+    }
+
+    @media #{$mob} {
+      flex-direction: column;
+      margin-bottom: 2.75em;
+    }
+  }
+
+  &__breadcrumb-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.625em;
+
+    >.p {
+      margin: auto 0 0 auto;
+      max-width: 47%;
+
+      @media #{$ipad} {
+        margin: 1.5625em 0 0 auto;
+        max-width: 80%;
+      }
+
+      @media #{$mob} {
+        margin: 0.25em 0 0 0;
+        max-width: 100%;
+      }
+    }
+
+    @media #{$mob} {
+      align-items: flex-start;
+    }
+  }
+
+  &__slider-option {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1.25em;
+  }
+
+  &__breadcrumb {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 -0.75em;
+    }
+
+    li {
+      margin: 0;
+      padding: 0 0.75em;
+      position: relative;
+      font-weight: 700;
+
+      a {
+        font-weight: 400;
+      }
+
+      &+li {
+        &::before {
+          content: "";
+          background: url('../svg/breadcrumb-icon.svg') center/contain no-repeat;
+          width: 0.55em;
+          height: 0.55em;
+          display: block;
+          position: absolute;
+          left: -0.275em;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .inner__list-slider {
+    height: 100%;
+    align-content: center;
+  }
+
+  &__figureSlider {
+    position: relative;
+    color: rgb(var(--secondary-color));
+
+    &--img-wrapper {
+      height: 100%;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        background: linear-gradient(133deg, #000 24.31%, rgba(0, 0, 0, 0.00) 76.96%);
+        mix-blend-mode: multiply;
+        z-index: 2;
+      }
+    }
+
+    &--content-wrapper {
+      position: absolute;
+      bottom: 7em;
+      z-index: 5;
+      max-width: 70%;
+      padding: 0 3.25em;
+
+      @media #{$mob} {
+        max-width: 100%;
+        padding: 0 2em;
+      }
+    }
+
+    .config_wrapper {
+      position: absolute;
+      bottom: 0;
+      z-index: 5555;
+      width: 100%;
+      left: 3.25em;
+
+      @media #{$mob} {
+        left: 2em;
+      }
+
+      .left-wrapper {
+        display: flex;
+        align-items: center;
+        grid-gap: 1em;
+        flex: 0 0 15.625em;
+
+        .swiper-scrollbar-wrapper {
+          flex: 0 0 8.125em;
+
+          .swiper-scrollbar {
+            background: rgba(var(--secondary-color), .2) !important;
+          }
+
+          .swiper-scrollbar-drag {
+            background: rgba(var(--secondary-color), 1) !important;
+          }
+        }
+      }
+
+      .swiper-slider-navigation {
+        justify-content: center;
+        margin-bottom: 2em;
+
+        @media #{$mob} {
+          justify-content: flex-start;
+          margin: 1em 0;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}

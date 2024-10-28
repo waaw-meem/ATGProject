@@ -1,0 +1,168 @@
+.generic-panel{
+    margin-bottom: 7.5em;
+}
+.approach-wrapper {
+    width: 33.33%;
+    padding: 0 7em;
+    border-right: 1px solid rgba(174, 180, 186, 0.6);
+    @media #{$ipadpro}{
+        padding: 0 1em;
+    }
+    @media #{$mob}{
+        width: 100%;
+        padding: 0;
+        border: 0;
+        margin-bottom: 1.25em;
+    }
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+        border-right: 0;
+    }
+}
+
+.accordion-services {
+    .top-wrapper {
+        justify-content: space-between;
+        @media #{$mob}{
+            h4{
+                width: 90%;
+            }
+        }
+
+        &:before {
+            display: none;
+        }
+
+        .plus-icon {
+            width: 18px;
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 18px;
+                height: 2.5px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background: #AEB4BA;
+                margin: auto;
+            }
+
+            &:after {
+                content: "";
+                width: 18px;
+                height: 2.5px;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                background: #AEB4BA;
+                transform: rotate(90deg);
+                margin: auto;
+                transition: $transition;
+            }
+        }
+    }
+
+    .inner-accordion {
+        &.opened {
+            background: transparent;
+            padding: 0;
+
+            .plus-icon {
+                &:after {
+                    transform: rotate(0);
+                }
+            }
+
+        }
+    }
+
+
+}
+.text-wrapper{
+    @media #{$mob}{
+        margin-top: 2em;
+    }
+}
+
+//  service detail
+
+
+.service-center_swiper-slider {
+
+    height: 31.25em;
+    transition: .8s;
+
+    .swiper-slide {
+        height: 100%;
+        padding-bottom: 5em;
+        transition: .8s;
+
+        .img_wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: calc(100%);
+                height: 100%;
+                transform: translate(-50%, -50%);
+                transition: .8s;
+            }
+
+        }
+
+
+
+        // &.swiper-slide-visible {
+        //     padding-bottom: 8.75em;
+        //     transition: .8s;
+        // }
+
+        &.swiper-slide-active {
+            height: 100%;
+            padding-bottom: 0;
+            transition: .8s;
+
+            .img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: calc(100% + 10.625em);
+                height: 100%;
+                transform: translate(-50%, -50%);
+                transition: .8s;
+                @media #{$mob}{
+                    width: 90%;
+                }
+
+            }
+
+        }
+
+
+
+        &.swiper-slide-next {
+            padding-left: 5.3125em;
+        }
+
+        &.swiper-slide-prev {
+            padding-right: 5.3125em;
+        }
+
+
+    }
+
+
+}

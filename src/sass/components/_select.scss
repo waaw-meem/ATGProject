@@ -1,0 +1,48 @@
+.home-hero__filter {
+  .choices[data-type*="select-one"] .choices__inner,
+  .choices__inner {
+    padding-left: 0;
+    background-color: rgb(var(--white-color));
+    border: 1px solid transparent;
+    margin: 0;
+    min-height: auto;
+    padding: 0;
+    
+    @media #{$mobL} {
+      border-bottom-color: rgb(var(--gold-color));
+    }
+  }
+  .choices__input {
+    background-color: inherit;
+  }
+  .choices__list--single {
+    padding-left: 0;
+    .choices__item {
+      color: rgba(var(--primary-color), 0.7);
+      font-weight: 500;
+    }
+  }
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  z-index: 999;
+}
+
+.choices[data-type*="select-one"]::after {
+  border-top-color: rgba(var(--primary-color), 0.7);
+}
+
+.choices__list--multiple {
+  .choices__item {
+    background-color: rgb(var(--gold-color));
+    border-color: rgb(var(--gold-color));
+  }
+}
+
+.choices.is-focused {
+  .is-highlighted {
+    background-color: rgb(var(--gold-color));
+    border-color: rgb(var(--gold-color));
+  }
+}

@@ -1,0 +1,324 @@
+.btnn {
+  font-size: 1.125em;
+  font-family: $basefont;
+  // position: relative;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.8em 1.6em 0.8em 1.5em;
+  color: rgba(var(--primary-color), 1);
+  background-color: transparent;
+  line-height: 1em;
+  text-transform: capitalize;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: $transition;
+  user-select: none;
+  border: 1px solid rgb(var(--primary-color));
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 0;
+  border-top-left-radius: 0.833em;
+  border-bottom-right-radius: 0.833em;
+  gap: 0.3em;
+
+  @media #{$ipadpro} {
+    font-size: 1em;
+  }
+
+  path {
+    fill: rgba(var(--primary-color), 1);
+    transition: $transition;
+  }
+
+  &:hover {
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--secondary-color));
+
+    .btnn__icon {
+      path {
+        fill: rgb(var(--secondary-color));
+      }
+    }
+  }
+
+  &__text {
+    pointer-events: none;
+  }
+
+  &__icon {
+    width: 0.6666em;
+    height: 0.7222em;
+    flex: 0 0 0.6666em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition;
+    transition-delay: 0.1s;
+    pointer-events: none;
+    margin-top: -0.3888em;
+
+    img,
+    svg {
+      transition: $transition;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.active {
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--secondary-color));
+
+    .btnn__icon {
+      path {
+        fill: rgb(var(--secondary-color));
+      }
+    }
+  }
+
+  &--white-outline {
+    @extend .btnn;
+    background-color: transparent;
+    color: rgba(var(--secondary-color), 1);
+    border-color: rgba(var(--secondary-color), 1);
+
+    path {
+      fill: rgba(var(--secondary-color));
+    }
+
+    &:hover {
+      background-color: rgb(var(--secondary-color));
+      color: rgb(var(--primary-color));
+
+      .btnn__icon {
+        path {
+          fill: rgba(var(--primary-color));
+        }
+      }
+    }
+  }
+
+  &--without-icon {
+    .btnn__icon {
+      display: none;
+    }
+  }
+
+  &--custom-hover {
+    &:hover {
+      background-color: rgb(var(--primary-color));
+      color: rgb(var(--secondary-color));
+      border-color: rgba(var(--primary-color), 1);
+
+      .btnn__icon {
+        path {
+          fill: rgba(var(--secondary-color));
+        }
+      }
+    }
+  }
+
+  &--without-icon {
+    .btnn__icon {
+      display: none;
+    }
+  }
+
+
+}
+
+
+.title-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+
+  &::after {
+    content: "";
+    background: url('../svg/group-interior-svgs/link-arrow.svg') center center/contain no-repeat;
+    width: 11px;
+    height: 11px;
+    display: block;
+  }
+
+  &--white {
+    &::after {
+      background-image: url("../svg/group-interior-svgs/link-arrow-white.svg");
+    }
+  }
+}
+
+// absolute button
+.absolute-btn-wrapper {
+  position: absolute;
+  right: 3.6458333333%;
+  top: 9.7em;
+
+  @media #{$ipadpro} {
+    top: 6em;
+  }
+
+  @media #{$ipad} {
+    position: static;
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  &--single-title {
+    top: 6.5em;
+
+    @media #{$ipadpro} {
+      top: 2.5em;
+    }
+  }
+}
+
+.btnn-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875em;
+
+  @media #{$mobL} {
+    gap: 1em;
+  }
+}
+
+// .rectangle-btn {
+//   @extend .btnn;
+//   padding-left: 2.2em;
+//   padding-right: 2.2em;
+//   font-weight: 500;
+//   @media #{$mobL} {
+//     padding-left: 2em;
+//     padding-right: 2em;
+//   }
+//   &:hover {
+//     background-color: rgba(var(--black-color), 1);
+//     color: rgba(var(--white-color), 1);
+//     border-color: transparent;
+//   }
+//   &--icon {
+//     padding-left: 1.1em;
+//     padding-right: 1.1em;
+//   }
+//   &--white {
+//     background-color: rgba(var(--secondary-color), 1);
+//     color: rgba(var(--primary-color), 1);
+//   }
+
+//   &.active {
+//     background: rgb(var(--gold-color));
+//     color: rgb(var(--secondary-color));
+//   }
+// }
+
+// .circle-icon {
+//   position: relative;
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 2.5em;
+//   flex: 0 0 2.5em;
+//   height: 2.5em;
+//   background-color: rgba(var(--primary-color), 1);
+//   border-radius: 50%;
+//   img,
+//   svg {
+//     width: 1.0625em;
+//   }
+// }
+
+.w-uline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  transition: $transition;
+
+  @media #{$ipadpro} {
+    font-size: 1em;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.19em;
+    width: 100%;
+    height: 2px;
+    background: rgba(var(--primary-color), 1);
+    transform: scaleX(0);
+    transition: $transition;
+  }
+
+  &:hover {
+    &::after {
+      transition: $transition;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.uline {
+  @extend .w-uline;
+
+  &::after {
+    transform: scaleX(1);
+    background: rgba(var(--secondary-color), 1);
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(0);
+    }
+  }
+}
+
+.btnn-stretched {
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    user-select: none;
+    background: transparent;
+    z-index: 1;
+  }
+}
+
+.btnn-group {
+  display: flex;
+}
+
+.btn-without-border {
+  font-size: 1.375em;
+  font-family: "Basis Grotesque Pro";
+  font-weight: 500;
+  text-align: center;
+  color: rgba(var(--primary-color), 1);
+  background-color: transparent;
+  line-height: 1em;
+  text-transform: capitalize;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 0;
+  border-top-left-radius: .833em;
+  border-bottom-right-radius: .833em;
+  gap: .3em;
+ .btnn__icon{
+  margin: 0;
+ }
+}

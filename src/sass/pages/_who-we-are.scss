@@ -1,0 +1,578 @@
+.inner-hero-sec {
+  .inner-hero__figureSlider--img-wrapper {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.who-discover-sec {
+  overflow: hidden;
+
+  .image_swiper-slider {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    .who-discover__img-wrapper {
+      width: 48.4375em;
+
+      @media #{$ipadpro} {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        display: block;
+        height: 41.6875em;
+
+        @media #{$ipadpro} {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .who-discover__content-wrapper {
+    padding-left: 1.875em;
+
+    @media #{$ipad} {
+      padding-left: 0;
+      padding-top: 2em;
+    }
+  }
+}
+
+
+// key growth
+.key-growth__projects-count {
+  margin: 6.25em auto 0;
+
+  @media #{$ipadpro} {
+    margin: 3em auto 0;
+  }
+
+  @media #{$mobL} {
+    margin-top: 2em;
+  }
+}
+
+.key-growth__card {
+  max-width: 86%;
+
+  .h3 {
+    font-size: 6.25em;
+    font-weight: 400;
+    border-bottom: 1px solid rgb(var(--primary-color));
+    margin-bottom: 0.2em;
+
+    @media #{$ipadpro} {
+      font-size: 3.25em;
+    }
+
+    @media #{$mobL} {
+      font-size: 2.5em;
+    }
+
+    &::after {
+      content: "+";
+    }
+  }
+
+  .p {
+    @media #{$desktop} {
+      font-size: 1.875em;
+      letter-spacing: -0.04em;
+    }
+  }
+}
+
+
+// who we are: taken from home page
+.who-we-are__slider-wrapper {
+  .swiper {
+    padding-top: 1em;
+
+    @media #{$tabL} {
+      padding-top: 2em;
+    }
+  }
+
+  .card {
+    transition: all 2000ms ease;
+  }
+
+  .swiper-slide-active {
+
+    .card {
+
+      &__desc {
+        opacity: 1;
+      }
+
+      &__body {
+        .btnn {
+          opacity: 1;
+        }
+      }
+
+      @media #{$tabL} {
+        transform: translateY(-1.875em);
+      }
+    }
+  }
+}
+
+.accreditations_section {
+  .accreditation_swiper-slider {
+    position: relative;
+    overflow: hidden;
+
+    .swiper-slider-navigation {
+      justify-content: center;
+      margin-top: 5.625em;
+      // position: absolute;
+      // bottom: -90px; 
+      // left: 50%; 
+      // display: flex;
+      // justify-content: center;
+      // width: auto; 
+      // transform: translateX(-50%);
+    }
+  }
+
+  .accreditation_box-wrapper {
+    width: 28.125em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1.875em;
+    overflow: hidden;
+
+    &:hover {
+      .img_wrapper {
+        background-color: rgb(var(--light-gray));
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    @media #{$mob} {
+      width: 100%;
+    }
+
+    .img_wrapper {
+      border: 1px solid rgb(var(--silver-color));
+      padding: 4.5625em 5.821875em;
+      transition: $transition;
+
+      img {
+        transform: scale(1);
+        transition: $transition;
+      }
+    }
+
+    .accreditation_box-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+
+      >p {
+        font-size: 1.125em;
+      }
+    }
+
+  }
+
+}
+
+.milestone_section {
+
+  .testimonial_content-slider {
+    padding: 4.375em 4em 4.375em 4.25em;
+    position: relative;
+
+    @media #{$ipadpro} {
+      padding: 3em 4em 3em 4em;
+    }
+
+    @media #{$ipad} {
+      padding: 2em 1em 2em 1em;
+    }
+
+    .testimonials__content {
+      .testimonials_text-editor {
+        margin-bottom: 4.375em;
+
+        p {
+          margin: 0;
+        }
+
+        @media #{$ipadpro} {
+          margin-bottom: 3.375em;
+        }
+
+        .heading_wrapper {
+          display: flex;
+          align-items: center;
+          grid-gap: 2.5em;
+          margin-bottom: 3.75em;
+
+          @media #{$ipadpro} {
+            margin-bottom: 1.75em;
+          }
+        }
+      }
+
+      .read_more-link {
+        margin-bottom: 4.375em;
+
+        @media #{$mob} {
+          margin-bottom: 0.375em;
+        }
+      }
+
+    }
+  }
+
+  .config_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media #{$mob} {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .left-wrapper {
+      display: flex;
+      align-items: center;
+      grid-gap: 2.5em;
+      flex: 0 0 15.625em;
+
+
+      @media #{$mob} {
+        grid-gap: 1.25em;
+        flex: 0 0 7.5em;
+      }
+
+      .swiper-scrollbar-wrapper {
+        flex: 0 0 8.125em;
+      }
+    }
+  }
+
+}
+
+.meet-our-team {
+  .text-editor {
+    margin-bottom: 3.4375em;
+
+    @media #{$mob} {
+      margin-bottom: 2.4375em;
+    }
+
+    p {
+      margin: 0;
+    }
+
+  }
+
+  .card_flex-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: 1.25em;
+    flex-wrap: wrap;
+
+    .img_card-Wrapper {
+      flex: 0 0 30%;
+
+      @media #{$mob} {
+        flex: 0 0 100%;
+      }
+    }
+
+    @media #{$ipad} {
+      justify-content: flex-start;
+      margin-top: 1.875em;
+    }
+  }
+
+}
+
+.sponsership-logoes {
+  padding-top: 1em;
+
+  @media #{$ipad} {
+    padding-top: 0;
+  }
+
+  .swiper-wrapper {
+    align-items: baseline;
+  }
+
+  .img-wrapper {
+
+    img,
+    svg {
+      width: auto;
+      max-width: 90%;
+      max-height: 9.375em;
+    }
+  }
+}
+
+.sponsership-logoes__slider {
+  .swiper-scrollbar-wrapper {
+    position: relative;
+    max-width: 8.125em;
+    margin-top: 3.75em;
+
+    .swiper-scrollbar {
+      height: 0.3125em;
+    }
+  }
+}
+
+
+.address-detail_section {
+
+  .detail_content {
+    padding: 4.375em 2em 2.375em 3.25em;
+    position: relative;
+
+    @media #{$mob} {
+      padding: 2.375em 2em 2.375em 1.25em;
+    }
+  }
+
+  .detail_item-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .detail_item-content ul li {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+
+  .upper-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.9375em;
+  }
+
+
+  .detail_item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+
+    @media #{$mob} {
+      flex: 0 0 100%;
+    }
+  }
+
+  .detail_item-title {
+    font-weight: 700;
+    font-size: 1.125em;
+  }
+
+  .get-direction-link .btn-without-border {
+    text-decoration: underline;
+
+    & span:first-child {
+      font-size: 0.9em;
+      font-weight: 700;
+    }
+  }
+
+  .detail_item-content {
+    margin-bottom: 1.5em;
+  }
+
+  .detail_flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 5em;
+
+    @media #{$mob} {
+      grid-gap: 2.5em;
+    }
+  }
+
+  .address-banner {
+    .address__img_wrapper {
+      img {
+        @media #{$ipadpro} {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+.timeline_section {
+  margin-top: 3.125em;
+
+  .timeline_image-slider {
+    overflow: hidden;
+
+    @media #{$ipad} {
+      margin-top: 1.875em;
+    }
+  }
+
+
+  .timeline_content {
+    padding: 4.375em 1.25em;
+  }
+
+  .timeline__image-wrapper {
+    width: 51.6875em;
+
+    @media #{$ipadpro} {
+      width: 100%;
+    }
+  }
+
+  .year_timeline-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @media #{$ipad} {
+      flex-direction: column;
+    }
+  }
+
+  .timeline-items-wrapper {
+    position: relative;
+    width: 18.75em;
+    height: 21.875em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: 1.25em;
+
+    @media #{$ipadpro} {
+      width: 8.125em;
+      height: 15.625em;
+      margin-right: 0;
+    }
+
+    @media #{$ipad} {
+      width: 100%;
+      height: 100%;
+      padding: 1.25em 0;
+      overflow-x: auto;
+    }
+
+  }
+
+  .timeline-items-wrapper::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .timeline-items {
+    position: relative;
+
+    @media #{$ipad} {
+      display: flex;
+    }
+  }
+
+  .timeline-items::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: calc(50% - 1px);
+    background-color: rgb(var(--primary-color));
+
+    @media #{$ipad} {
+      width: 100%;
+      height: 1px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    padding-right: calc(50% + 30px);
+    text-align: right;
+
+    @media #{$ipad} {
+      padding-right: calc(10% + 10px);
+    }
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-dot {
+    height: 16px;
+    width: 16px;
+    background-color: rgb(var(--silver-color));
+    position: absolute;
+    left: calc(50% - 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+
+    @media #{$ipad} {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .timeline-date {
+    color: rgb(var(--silver-color));
+    margin: 0.375em 0 0.9375em;
+    transition: color 0.3s;
+
+    @media #{$ipad} {
+      margin-top: 0.625em;
+    }
+  }
+
+  .timeline-item.active .timeline-dot {
+    background-color: rgb(var(--primary-color));
+  }
+
+  .timeline-item.active .timeline-date {
+    color: rgb(var(--primary-color));
+  }
+
+  .content_wrapper {
+    flex: 1;
+    max-width: 450px;
+    overflow: hidden;
+
+    @media #{$ipadpro} {
+      max-width: 15.625em;
+    }
+
+    @media #{$ipad} {
+      max-width: 100%;
+    }
+  }
+
+  .swiper-slider-navigation {
+    justify-content: flex-end;
+
+  }
+}
